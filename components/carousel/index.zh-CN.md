@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Views
+type: Navigation
 title: Carousel
 subtitle: 走马灯
 ---

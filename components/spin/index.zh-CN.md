@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Other
+type: Loading
 title: Spin
 subtitle: 加载中
 ---

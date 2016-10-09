@@ -1,7 +1,7 @@
 ---
 category: Components
 subtitle: 栅格
-type: Basic
+type: Layout
 cols: 1
 title: Layout
 ---

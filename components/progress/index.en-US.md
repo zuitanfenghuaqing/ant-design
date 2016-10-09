@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Views
+type: Loading
 title: Progress
 ---
 

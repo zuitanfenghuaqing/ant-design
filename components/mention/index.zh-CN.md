@@ -2,7 +2,7 @@
 category: Components
 subtitle: 提及
 cols: 1
-type: Views
+type: Displaying Data
 title: Mention
 ---
 

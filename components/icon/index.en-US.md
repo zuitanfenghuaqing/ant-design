@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Basic
+type: Icons
 title: Icon
 toc: false
 ---

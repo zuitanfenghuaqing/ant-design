@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Views
+type: Displaying Data
 title: Timeline
 ---
 

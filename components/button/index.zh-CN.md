@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Basic
+type: Data Entry
 title: Button
 subtitle: 按钮
 ---

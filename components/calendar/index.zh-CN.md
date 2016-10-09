@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Views
+type: Data Entry
 subtitle: 日历
 cols: 1
 title: Calendar

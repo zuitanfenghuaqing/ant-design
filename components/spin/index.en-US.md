@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Loading
+type: Feedback
 title: Spin
 ---
 

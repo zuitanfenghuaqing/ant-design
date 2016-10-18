@@ -1,9 +1,9 @@
 ---
 category: Components
-subtitle: 布局
+subtitle: 栅格
 type: Layout
 cols: 1
-title: Layout
+title: Grid
 ---
 
 24 栅格系统。

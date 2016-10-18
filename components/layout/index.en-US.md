@@ -2,7 +2,7 @@
 category: Components
 type: Layout
 cols: 1
-title: Layout
+title: Grid
 ---
 
 24 Grids System。

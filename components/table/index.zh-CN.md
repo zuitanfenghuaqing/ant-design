@@ -1,7 +1,7 @@
 ---
 category: Components
 cols: 1
-type: Displaying Data
+type: Data Display
 title: Table
 subtitle: 表格
 ---

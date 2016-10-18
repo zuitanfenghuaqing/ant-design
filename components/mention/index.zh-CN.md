@@ -2,7 +2,7 @@
 category: Components
 subtitle: 提及
 cols: 1
-type: Displaying Data
+type: Data Entry
 title: Mention
 ---
 

@@ -1,7 +1,7 @@
 ---
 category: Components
 subtitle: 气泡卡片
-type: Feedback
+type: Data Display
 title: Popover
 ---
 

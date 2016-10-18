@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Displaying Data
+type: Data Display
 title: Tree
 subtitle: 树形控件
 ---

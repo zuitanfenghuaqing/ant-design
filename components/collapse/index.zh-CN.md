@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Displaying Data
+type: Data Display
 title: Collapse
 subtitle: 折叠面板
 ---

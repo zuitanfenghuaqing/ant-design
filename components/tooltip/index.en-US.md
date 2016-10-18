@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Feedback
+type: Data Display
 title: Tooltip
 ---
 

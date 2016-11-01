@@ -3,11 +3,11 @@ import { PropTypes } from 'react';
 import classNames from 'classnames';
 import PureRenderMixin from 'rc-util/lib/PureRenderMixin';
 import omit from 'omit.js';
-import warning from 'warning';
 import assign from 'object-assign';
 import FormItem from './FormItem';
 import createDOMForm from 'rc-form/lib/createDOMForm';
 import { FIELD_META_PROP } from './constants';
+import warning from '../_util/warning';
 
 export interface FormCreateOption {
   onFieldsChange?: (props: any, fields: Array<any>) => void;

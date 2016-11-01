@@ -16,6 +16,7 @@ title: Tag
 
 | 参数           | 说明                           | 类型  | 默认值 |
 |----------------|-------------------------------|------|--------|
+| type           | 设置 Tag 的风格               | `'default' | 'simple'` | 'default' |
 | closable       | 标签是否可以关闭               | boolean    | false  |
 | onClose        | 关闭时的回调                   | function(event) | - |
 | afterClose     | 关闭动画完成后的回调             | function(event) | - |

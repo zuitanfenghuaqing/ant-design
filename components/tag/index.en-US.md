@@ -16,6 +16,7 @@ Tag for categorizing or markuping.
 
 | Property     | Description           | Type     | Default      |
 |--------------|-----------------------|----------|--------------|
+| type         | To set the style of Tag | `'default' | 'simple'` | 'default' |
 | closable     | Tag can be closed.    | boolean  | false        |
 | onClose      | Callback when tag was closed | function(event)| - |
 | afterClose   | Callback when closed animation is complete | function(event)| - |

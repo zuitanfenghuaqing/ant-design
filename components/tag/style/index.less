@@ -9,8 +9,6 @@
   height: 22px;
   padding: 0 8px;
   border-radius: @border-radius-base;
-  border: 1px solid @border-color-split;
-  background: @background-color-base;
   font-size: @font-size-base;
   transition: all 0.3s @ease-in-out-circ;
   vertical-align: middle;
@@ -18,6 +16,11 @@
   overflow: hidden;
   margin: 2px 4px 2px 0;
   cursor: pointer;
+
+  &-default {
+    border: 1px solid @border-color-split;
+    background: @background-color-base;
+  }
 
   &:hover {
     opacity: 0.85;

@@ -8,6 +8,7 @@ import warning from '../_util/warning';
 import splitObject from '../_util/splitObject';
 
 export interface TagProps {
+  type?: 'default' | 'simple';
   /** 标签是否可以关闭 */
   closable?: boolean;
   /** 关闭时的回调 */
@@ -20,6 +21,7 @@ export interface TagProps {
 export default class Tag extends React.Component<TagProps, any> {
   static defaultProps = {
     prefixCls: 'ant-tag',
+    type: 'default',
     closable: false,
   };
 
@@ -66,14 +68,15 @@ export default class Tag extends React.Component<TagProps, any> {
 
   render() {
     const [{
-      prefixCls, closable, color, className, children,
+      prefixCls, type, closable, color, className, children,
     }, otherProps] = splitObject(
       this.props,
-      ['prefixCls', 'closable', 'color', 'className', 'children']
+      ['prefixCls', 'type', 'closable', 'color', 'className', 'children']
     );
     const closeIcon = closable ? <Icon type="cross" onClick={this.close} /> : '';
     const classString = classNames({
       [prefixCls]: true,
+      [`${prefixCls}-${type}`]: true,
       [`${prefixCls}-${color}`]: !!color,
       [`${prefixCls}-has-color`]: !!color,
       [`${prefixCls}-close`]: this.state.closing,

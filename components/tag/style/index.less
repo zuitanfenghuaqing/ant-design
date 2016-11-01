@@ -8,18 +8,23 @@
   line-height: 20px;
   height: 22px;
   padding: 0 8px;
+  border: 1px solid @border-color-split;
   border-radius: @border-radius-base;
   font-size: @font-size-base;
   transition: all 0.3s @ease-in-out-circ;
   vertical-align: middle;
   opacity: 1;
   overflow: hidden;
-  margin: 2px 4px 2px 0;
+  margin: 2px 8px 2px 0;
   cursor: pointer;
 
   &-default {
-    border: 1px solid @border-color-split;
     background: @background-color-base;
+  }
+
+  &-simple,
+  &-has-color {
+    border-color: transparent;
   }
 
   &:hover {
@@ -30,6 +35,22 @@
   a,
   a:hover {
     color: @text-color;
+  }
+
+  &-checkable {
+    &:hover,
+    &:active,
+    &-checked {
+      border-color: transparent;
+      color: #fff;
+    }
+    &:hover {
+      background-color: tint(@primary-color, 20%);
+    }
+    &:active,
+    &-checked {
+      background-color: shade(@primary-color, 5%);
+    }
   }
 
   &-text {
@@ -52,10 +73,6 @@
     &:hover {
       opacity: 1;
     }
-  }
-
-  &-has-color {
-    border-color: transparent;
   }
 
   &-blue,

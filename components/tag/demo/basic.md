@@ -28,10 +28,10 @@ ReactDOM.render(
       <a href="https://github.com/ant-design/ant-design/issues/1862">Tag 3</a>
     </Tag>
     <br />
-    <Tag type="simple">Tag 4</Tag>
-    <Tag type="simple" closable onClose={onClose}>Tag 5</Tag>
+    <Tag type="simple">Tag 1</Tag>
+    <Tag type="simple" closable onClose={onClose}>Tag 2</Tag>
     <Tag type="simple" closable onClose={onClose}>
-      <a href="https://github.com/ant-design/ant-design/issues/1862">Tag 6</a>
+      <a href="https://github.com/ant-design/ant-design/issues/1862">Tag 3</a>
     </Tag>
   </div>,
   mountNode

@@ -9,6 +9,10 @@ import splitObject from '../_util/splitObject';
 
 export interface TagProps {
   type?: 'default' | 'simple';
+  checkable?: boolean;
+  defaultChecked?: boolean;
+  checked?: boolean;
+  onChange?: (checked?: boolean) => void;
   /** 标签是否可以关闭 */
   closable?: boolean;
   /** 关闭时的回调 */
@@ -22,17 +26,35 @@ export default class Tag extends React.Component<TagProps, any> {
   static defaultProps = {
     prefixCls: 'ant-tag',
     type: 'default',
-    closable: false,
   };
 
-  constructor(props) {
+  constructor(props: TagProps) {
     super(props);
     warning(!('color' in props), '`Tag[color]` is deprecated, please override color by CSS instead.');
 
     this.state = {
+      checked: props.checked !== undefined ? props.checked : props.defaultChecked,
       closing: false,
       closed: false,
     };
+  }
+
+  componentWillReceiveProps(nextProps: TagProps) {
+    if (nextProps.checked !== undefined) {
+      this.setState({ checked: nextProps.checked });
+    }
+  }
+
+  toggleChecked = () => {
+    const checked = !this.state.checked;
+    if (this.props.checked === undefined) {
+      this.setState({ checked });
+    }
+
+    const { onChange } = this.props;
+    if (onChange) {
+      onChange(checked);
+    }
   }
 
   close = (e) => {
@@ -68,15 +90,17 @@ export default class Tag extends React.Component<TagProps, any> {
 
   render() {
     const [{
-      prefixCls, type, closable, color, className, children,
+      prefixCls, type, checkable, closable, color, className, children,
     }, otherProps] = splitObject(
       this.props,
-      ['prefixCls', 'type', 'closable', 'color', 'className', 'children']
+      ['prefixCls', 'type', 'checkable', 'closable', 'color', 'className', 'children']
     );
     const closeIcon = closable ? <Icon type="cross" onClick={this.close} /> : '';
     const classString = classNames({
       [prefixCls]: true,
       [`${prefixCls}-${type}`]: true,
+      [`${prefixCls}-checkable`]: checkable,
+      [`${prefixCls}-checkable-checked`]: this.state.checked,
       [`${prefixCls}-${color}`]: !!color,
       [`${prefixCls}-has-color`]: !!color,
       [`${prefixCls}-close`]: this.state.closing,
@@ -100,6 +124,7 @@ export default class Tag extends React.Component<TagProps, any> {
             {...divProps}
             className={classString}
             style={{ backgroundColor: /blue|red|green|yellow/.test(color) ? null : color }}
+            onClick={this.toggleChecked}
           >
             <span className={`${prefixCls}-text`}>{children}</span>
             {closeIcon}

@@ -26,7 +26,7 @@ const ControlledTag = React.createClass({
   render() {
     return (
       <Tag
-        type="simple"
+        bordered={false}
         checkable
         checked={this.state.checked}
         onChange={this.handleChange}
@@ -44,7 +44,7 @@ function log(checked) {
 ReactDOM.render(
   <div>
     <Tag checkable onChange={log}>Default</Tag>
-    <Tag type="simple" checkable onChange={log}>Simple</Tag>
+    <Tag bordered={false} checkable onChange={log}>Simple</Tag>
     <ControlledTag />
   </div>,
   mountNode

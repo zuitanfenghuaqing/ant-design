@@ -28,9 +28,9 @@ ReactDOM.render(
       <a href="https://github.com/ant-design/ant-design/issues/1862">Tag 3</a>
     </Tag>
     <br />
-    <Tag type="simple">Tag 1</Tag>
-    <Tag type="simple" closable onClose={onClose}>Tag 2</Tag>
-    <Tag type="simple" closable onClose={onClose}>
+    <Tag bordered={false}>Tag 1</Tag>
+    <Tag bordered={false} closable onClose={onClose}>Tag 2</Tag>
+    <Tag bordered={false} closable onClose={onClose}>
       <a href="https://github.com/ant-design/ant-design/issues/1862">Tag 3</a>
     </Tag>
   </div>,

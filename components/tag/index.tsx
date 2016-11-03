@@ -8,7 +8,7 @@ import warning from '../_util/warning';
 import splitObject from '../_util/splitObject';
 
 export interface TagProps {
-  type?: 'default' | 'simple';
+  bordered?: boolean;
   checkable?: boolean;
   defaultChecked?: boolean;
   checked?: boolean;
@@ -25,7 +25,7 @@ export interface TagProps {
 export default class Tag extends React.Component<TagProps, any> {
   static defaultProps = {
     prefixCls: 'ant-tag',
-    type: 'default',
+    bordered: true,
   };
 
   constructor(props: TagProps) {
@@ -90,15 +90,15 @@ export default class Tag extends React.Component<TagProps, any> {
 
   render() {
     const [{
-      prefixCls, type, checkable, closable, color, className, children,
+      prefixCls, bordered, checkable, closable, color, className, children,
     }, otherProps] = splitObject(
       this.props,
-      ['prefixCls', 'type', 'checkable', 'closable', 'color', 'className', 'children']
+      ['prefixCls', 'bordered', 'checkable', 'closable', 'color', 'className', 'children']
     );
     const closeIcon = closable ? <Icon type="cross" onClick={this.close} /> : '';
     const classString = classNames({
       [prefixCls]: true,
-      [`${prefixCls}-${type}`]: true,
+      [`${prefixCls}-simple`]: !bordered,
       [`${prefixCls}-checkable`]: checkable,
       [`${prefixCls}-checkable-checked`]: this.state.checked,
       [`${prefixCls}-${color}`]: !!color,

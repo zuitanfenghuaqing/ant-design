@@ -16,7 +16,7 @@ Tag for categorizing or markuping.
 
 | Property     | Description           | Type     | Default      |
 |--------------|-----------------------|----------|--------------|
-| type         | To set the style of Tag | `'default' | 'simple'` | 'default' |
+| bordered       | To set the style of Tag | boolean | true |
 | checkable      | Make Tag behave like Checkbox | boolean    | false  |
 | checked        | Specifies whether the tag is selected | boolean    | - |
 | defaultChecked | Specifies the initial state: whether or not the tag is selected | boolean    | - |

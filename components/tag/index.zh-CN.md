@@ -16,7 +16,7 @@ title: Tag
 
 | 参数           | 说明                           | 类型  | 默认值 |
 |----------------|-------------------------------|------|--------|
-| type           | 设置 Tag 的风格               | `'default' | 'simple'` | 'default' |
+| bordered       | 设置 Tag 的风格               | boolean    | true |
 | checkable      | 让 Tag 具有类似 Checkbox 的行为| boolean    | false  |
 | checked        | 指定当前是否选中               | boolean    | - |
 | defaultChecked | 初始是否选中                  | boolean    | - |

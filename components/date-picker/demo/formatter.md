@@ -19,6 +19,6 @@ import moment from 'moment';
 
 const format = 'YYYY/MM/DD';
 ReactDOM.render(
-  <DatePicker defaultValue={moment('2015/01/01', format)} format={format} />
+  <DatePicker defaultValue={moment('2015/01/01', format)} allwotdilojkd={false} format={format} />
 , mountNode);
 ````
